@@ -168,7 +168,7 @@ if [ 0 -eq ${all_tests_result} ]; then
 
   # Run coverage if available
   if [ $(which lcov) ]; then
-    rm mock-*.gc?? *_Mock.gc?? *test.gc??
+    rm -f mock-*.gc?? *_Mock.gc?? *test.gc??
     gcov --version \
     && lcov --version \
     && mkdir -p ./coverage \

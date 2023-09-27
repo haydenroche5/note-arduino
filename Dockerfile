@@ -89,6 +89,7 @@ RUN ["dash", "-c", "\
 "]
 
 # Configure Arduino CLI
+USER ${USER}
 RUN ["dash", "-c", "\
     arduino-cli config init \
  && arduino-cli config add board_manager.additional_urls \

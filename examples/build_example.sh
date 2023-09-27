@@ -8,6 +8,7 @@ NOTE_ARDUINO_DIR="$SCRIPT_DIR/.."
 # be consumed when building the example.
 if grep -sq 'docker\|lxc' /proc/1/cgroup; then
     cp -r $NOTE_ARDUINO_DIR $HOME/Arduino/libraries/Blues_Wireless_Notecard
+    export HOME=/home/blues
 fi
 
 arduino-cli compile \
